@@ -1,4 +1,5 @@
 export * from "./sample1/controller.mjs"
+export * from "./sample2/controller.mjs"
 const postSample1 = (req, res) => {
     console.log(req.body)
     res.send(JSON.stringify({ status: "success" }))
