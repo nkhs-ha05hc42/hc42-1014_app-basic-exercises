@@ -1,6 +1,11 @@
 import express from "express"
 import path from "path"
 import { sample1Controller, sample2Controller } from "./api/controllers.mjs"
+import { examsController } from "./api/9-7/q9_7_1Controller.mjs"
+import { examsController2 } from "./api/9-7/q9_7_2Controller.mjs"
+import { examsController3 } from "./api/9-7/q9_7_3Controller.mjs"
+import { examsController4 } from "./api/9-7/q9_7_4Controller.mjs"
+import { examsController5 } from "./api/9-7/q9_7_5Controller.mjs"
 
 const routers = express.Router()
 
@@ -23,6 +28,11 @@ routers.get("/api/sample2/:id", sample2Controller.getOneSample2)
 routers.get("/api/sample2", sample2Controller.getAllSample2)
 routers.put("/api/sample2/:id", sample2Controller.putSample2)
 routers.delete("/api/sample2/:id", sample2Controller.deleteSample2)
+routers.get("/api/9-7", examsController.getAllExams)
+routers.get("/api/9-7/:id", examsController2.getExamById)
+routers.post("/api/9-7", examsController3.createExam)
+routers.put("/api/9-7/:id", examsController4.updateExam)
+routers.delete("/api/9-7/:id", examsController5.deleteExam)
 
 // client配下は、ブラウザサイドで実行されるファイル（HTML/JS/CSS/画像など）を配置する
 routers.use(express.static(`${path.resolve()}/client`))
