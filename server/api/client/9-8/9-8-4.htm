@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課題9-8-4</title>
+    <script type="module" src="9-8-4.mjs"></script>
+</head>
+<body>
+    <h1>データ更新</h1>
+    <label>対象のID: <input type="number" id="targetId"></label>
+    <button id="loadButton">対象の読み込み</button>
+
+    <form id="updateForm">
+        <label>ID: <input type="number" id="id" disabled></label><br>
+        <label>UserID: <input type="number" id="userId"></label><br>
+        <label>Year: <input type="number" id="year"></label><br>
+        <label>Month: <input type="number" id="month"></label><br>
+        <label>Day: <input type="number" id="day"></label><br>
+        <label>Name: <input type="text" id="name"></label><br>
+        <label>Score: <input type="number" id="score"></label><br>
+        <button type="submit">更新</button>
+    </form>
+</body>
+</html>
